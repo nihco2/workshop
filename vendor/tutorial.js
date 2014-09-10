@@ -93,8 +93,9 @@ $.get('tutorial.html').done(function (content) {
     });
 
     templateContains = function (templateName, text, msg) {
-        return ok(TEMPLATES[templateName] &&
-            TEMPLATES[templateName]
+        console.log('TEMPLATE: ', require('workshop/templates/' + templateName)['default']);
+        return ok(require('workshop/templates/' + templateName) &&
+            require('workshop/templates/' + templateName).toString()
                 .replace(/ /g, '')
                 .replace(/"/g, "'").indexOf(text) != -1, msg);
     }
@@ -117,7 +118,7 @@ $.get('tutorial.html').done(function (content) {
             detailTemplateName: "tutorial-step-hello",
             solutionTemplateName: "tutorial-solution-hello",
             test: function () {
-                ok(Em.TEMPLATES['application'] != undefined,
+                ok(require('workshop/templates/application')['default'] != undefined,
                     "Le template 'application' n'est pas déclaré.");
 
                 templateContains("application", "MyLi'lPonyApplication",
