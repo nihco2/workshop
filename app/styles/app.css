@@ -1,3 +1,295 @@
-html, body {
-  margin: 20px;
+@import 'vendor/bootstrap.min.css';
+@import 'vendor/shCore.css';
+@import 'vendor/shThemeDefault.css';
+
+@font-face {
+  font-family: 'IM Fell French Canon';
+  font-style: normal;
+  font-weight: 400;
+  src: local('IM FELL French Canon Roman'), local('IM_FELL_French_Canon_Roman'), url(http://localhost:3000/css/font.woff) format('woff');
+}
+@font-face {
+  font-family: 'IM Fell French Canon';
+  font-style: italic;
+  font-weight: 400;
+  src: local('IM FELL French Canon Italic'), local('IM_FELL_French_Canon_Italic'), url(http://localhost:3000/fonts/font-italic.woff) format('woff');
+}
+@-webkit-keyframes letterColor {
+  0% {
+    color: #cc0088;
+    text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.8);
+  }
+  17% {
+    color: #55ccee;
+    text-shadow: -1px -1px 2px rgba(0, 0, 0, 0.8);
+  }
+  50% {
+    color: #00cc00;
+    text-shadow: 1px -1px 2px rgba(0, 0, 0, 0.8);
+  }
+  83% {
+    color: #14a1c9;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  }
+  100% {
+    color: #cc0088;
+    text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.8);
+  }
+}
+@-moz-keyframes letterColor {
+  0% {
+    color: #cc0088;
+    text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.8);
+  }
+  17% {
+    color: #55ccee;
+    text-shadow: -1px -1px 2px rgba(0, 0, 0, 0.8);
+  }
+  50% {
+    color: #00cc00;
+    text-shadow: 1px -1px 2px rgba(0, 0, 0, 0.8);
+  }
+  83% {
+    color: #14a1c9;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  }
+  100% {
+    color: #cc0088;
+    text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.8);
+  }
+}
+
+.fluid-container{
+  max-width:100%;
+}
+
+#ember-app {
+  display: inline-block;
+  color: #cc0088;
+  margin-left: 50%;
+  padding-left: 3%;
+  padding-right: 3%;
+  width: 44%;
+}
+#ember-app * {
+  font-family: 'IM Fell French Canon', serif;
+}
+#ember-app h1 {
+  color: #cc0088;
+  display: block;
+  padding: 10px 5px;
+  text-align: center;
+  text-shadow: -1px 1px 1px rgba(255, 255, 255, 0.7);
+  margin-top: 0;
+  margin-bottom: 80px;
+  -webkit-border-radius: 0 0 200px 200px;
+  -moz-border-radius: 0 0 200px 200px;
+  -ms-border-radius: 0 0 200px 200px;
+  -o-border-radius: 0 0 200px 200px;
+  border-radius: 0 0 200px 200px;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.35);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.35);
+  background-color: #ffff00;
+  background: -webkit-linear-gradient(top, #ffff00, #ff9900);
+  background: -moz-linear-gradient(top, #ffff00, #ff9900);
+  background: -ms-linear-gradient(top, #ffff00, #ff9900);
+  background: -o-linear-gradient(top, #ffff00, #ff9900);
+}
+#ember-app h1 a {
+  text-decoration: none;
+}
+#ember-app h1 a:hover {
+  font-size: 100%;
+  color: #14a1c9;
+  text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.8);
+  -webkit-animation: letterColor 1s infinite 0 ease;
+  -moz-animation: letterColor 1s infinite 0 ease;
+  -ms-animation: letterColor 1s infinite 0 ease;
+}
+#ember-app ul {
+  margin-top: 30px;
+}
+#ember-app ul li {
+  list-style: disc;
+}
+#ember-app a {
+  color: #cc0088;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+}
+#ember-app a:hover {
+  color: #ff66cc;
+  font-size: 150%;
+}
+#ember-app > div > a {
+  padding: 10px 80px;
+  background-color: #ffff00;
+  -webkit-box-shadow: inset 5px 5px 15px #ffffff, inset -5px -5px 15px #ff9900;
+  -moz-box-shadow: inset 5px 5px 15px #ffffff, inset -5px -5px 15px #ff9900;
+  box-shadow: inset 5px 5px 15px #ffffff, inset -5px -5px 15px #ff9900;
+}
+#ember-app > div > a:hover {
+  color: #55ccee;
+  background-color: #ff33bb;
+  -webkit-box-shadow: inset 5px 5px 15px #ffffff, inset -5px -5px 15px #660044;
+  -moz-box-shadow: inset 5px 5px 15px #ffffff, inset -5px -5px 15px #660044;
+  box-shadow: inset 5px 5px 15px #ffffff, inset -5px -5px 15px #660044;
+}
+#ember-app input[type=submit] {
+  color: #cc0088;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  margin-top: 20px;
+  padding: 10px 80px;
+  background-color: #ffff00;
+  -webkit-box-shadow: inset 5px 5px 15px #ffffff, inset -5px -5px 15px #ff9900;
+  -moz-box-shadow: inset 5px 5px 15px #ffffff, inset -5px -5px 15px #ff9900;
+  box-shadow: inset 5px 5px 15px #ffffff, inset -5px -5px 15px #ff9900;
+}
+#ember-app input[type=submit]:hover,
+#ember-app input[type=submit]:focus {
+  color: #55ccee;
+  background-color: #ff33bb;
+  -webkit-box-shadow: inset 5px 5px 15px #ffffff, inset -5px -5px 15px #660044;
+  -moz-box-shadow: inset 5px 5px 15px #ffffff, inset -5px -5px 15px #660044;
+  box-shadow: inset 5px 5px 15px #ffffff, inset -5px -5px 15px #660044;
+  font-size: 150%;
+}
+#ember-app label,
+#ember-app input.ember-text-field {
+  display: inline-block;
+  width: 200px;
+}
+#ember-app input.ember-text-field {
+  color: #cc0088;
+  background-color: #e0f6fc;
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+  -o-transition: all 0.8s;
+}
+#ember-app input.ember-text-field:focus {
+  border-color: #ffff00;
+  border-width: 7px;
+  font-size: 140%;
+}
+header,footer{
+  display: none;
+}
+#tutorial {
+  min-height: 50em;
+  margin-left: 0px;
+  box-shadow: 5px 0px 5px gray;
+  font-family: 'IM Fell French Canon', serif;
+  font-style: italic;
+  background: url("/img/tutorial-bg.jpg");
+  z-index: 10;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  overflow: auto;
+  height: 100%;
+  width: 50%;
+}
+#tutorial #header {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+#tutorial #header img {
+  width: 100px;
+}
+#tutorial #header h2 {
+  padding-left: 10px;
+  display: inline;
+  font-size: 50px;
+  text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.5);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+}
+#tutorial .steps {
+  position: relative;
+  bottom: 0px;
+}
+#tutorial .steps .step {
+  font-size: 18px;
+  padding-left: 40px;
+  padding-top: 5px;
+  padding-bottom: 25px;
+  color: #bfbfbf;
+}
+#tutorial .steps .step .picto {
+  /*background: url(/img/picto.png) no-repeat 0px 0px;*/
+  width: 14px;
+  height: 14px;
+  background-color: #cc0088;
+  display: block;
+  margin-left: -16px;
+  margin-top: -17px;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  -ms-border-radius: 14px;
+  -o-border-radius: 14px;
+  border-radius: 14px;
+}
+#tutorial .steps .step.is-active {
+  color: #000000;
+}
+#tutorial .steps .step .step-title {
+  font-size: 22px;
+  font-weight: bold;
+  padding-left: 10px;
+  cursor: pointer;
+}
+#tutorial .steps .step .step-title:hover {
+  color: #5f5f5f;
+}
+#tutorial .steps .step .step-detail {
+  font-family: 'Helvetica Neue';
+  font-size: 15px;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+#tutorial .steps .step .vline {
+  width: 1px;
+  position: absolute;
+  left: 40px;
+  border-left: 4px solid #cc0088;
+  z-index: 0;
+}
+#tutorial .steps .step .vline.a {
+  top: -1px;
+  bottom: 50%;
+}
+#tutorial .steps .step .vline.b {
+  top: 50%;
+  bottom: 0;
+}
+#tutorial .solHidden {
+  display: none;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+@media screen and (max-width: 1024px) {
+  #tutorial {
+    display: block;
+    position: relative;
+    width: auto;
+  }
+  #ember-app {
+    margin: 2%;
+  }
+}
+.code {
+  font-size: 11px;
 }
