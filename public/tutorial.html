@@ -26,7 +26,7 @@
         <div class="well">
             {{step.allErrors}}
         </div>
-        <button class="btn btn-success" type="button" {{action toggleSolution target="view"}}>Solution<span class="caret"></span></button>
+        <button class="btn btn-success" type="button" {{action 'toggleSolution' target="view"}}>Solution<span class="caret"></span></button>
 
         <div {{bind-attr class=":solution view.solutionIsShown:solShown:solHidden"}}>
             {{view view.solutionView}}

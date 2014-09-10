@@ -12,4 +12,4 @@ var App = Ember.Application.extend({
 
 loadInitializers(App, 'workshop');
 
-export default App;
+export default window.App = App;
