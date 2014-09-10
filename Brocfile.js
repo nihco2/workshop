@@ -4,6 +4,13 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 var app = new EmberApp();
 
+app.import('vendor/bootstrap.min.js');
+app.import('vendor/shCore.js');
+app.import('vendor/shBrushJScript.js');
+app.import('vendor/ApplicationWrapper.js');
+app.import('vendor/tutorial.js');
+app.import('vendor/PonyUnit.js');
+
 // Use `app.import` to add additional libraries to the generated
 // output files.
 //
