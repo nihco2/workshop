@@ -5,9 +5,12 @@ import loadInitializers from 'ember/load-initializers';
 Ember.MODEL_FACTORY_INJECTIONS = true;
 
 var App = Ember.Application.extend({
-  modulePrefix: 'workshop', // TODO: loaded via config
+  modulePrefix: 'workshop',
   Resolver: Resolver,
-  rootElement:'#ember-app'
+  rootElement:'#ember-app',
+  ready: function() {
+    this.devTools.globalize();
+  }
 });
 
 loadInitializers(App, 'workshop');

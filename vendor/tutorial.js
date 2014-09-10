@@ -109,6 +109,12 @@ $.get('tutorial.html').done(function (content) {
             test: function () {
                 ok(typeof App != "undefined",
                     "Il n'y a pas d'Objet App dans window");
+                
+                 ok(Em.typeOf(App) != "class",
+                     "Cet objet App doit être un objet et non une classe");
+
+                ok(Em.typeOf(App) == "instance",
+                    "Cet objet App doit être un objet Ember");
 
                 ok(App.rootElement == '#ember-app', "ember-app n'est pas la div racine de l'application");
             }
